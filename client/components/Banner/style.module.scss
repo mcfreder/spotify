@@ -1,0 +1,151 @@
+@import "@styles/mixins.scss";
+@import "@styles/extensions.scss";
+
+.wrapper {
+  display: flex;
+  height: 30vh;
+  max-height: 500px;
+  min-height: 340px;
+  overflow: hidden;
+  position: relative;
+  padding: 0 32px;
+  padding-bottom: 24px;
+  margin-top: -64px;
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &:before {
+    background-color: rgb(80, 56, 160);
+  }
+
+  &:after {
+    background: linear-gradient(transparent 0, rgba(0, 0, 0, 0.5) 100%),
+      url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iLjA1IiBkPSJNMCAwaDMwMHYzMDBIMHoiLz48L3N2Zz4=);
+  }
+}
+
+.box {
+  z-index: 1;
+  display: flex;
+  align-self: flex-end;
+  height: 192px;
+  margin-inline-end: 24px;
+  min-width: 192px;
+  width: 192px;
+  position: relative;
+
+  img {
+    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+    height: 100%;
+    width: 100%;
+    object-position: center center;
+    object-fit: cover;
+  }
+}
+
+.container {
+  align-content: space-between;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  justify-content: flex-end;
+  z-index: 1;
+
+  h2 {
+    @extend %flex-shared;
+    @include font($weight: 700, $size: 12px, $transform: uppercase);
+
+    margin-top: 4px;
+  }
+
+  span {
+    overflow: hidden;
+    width: 100%;
+    word-break: break-word;
+
+    h1 {
+      @include font($weight: 900, $size: 96px, $spacing: -0.04em, $lh: 96px);
+
+      width: 100%;
+      visibility: visible;
+      padding: 0.08em 0;
+    }
+  }
+
+  div {
+    @extend %flex-shared;
+
+    flex-wrap: wrap;
+    margin-top: 8px;
+
+    a {
+      @include font($weight: 700);
+
+      white-space: nowrap;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    span::before {
+      content: "•";
+      margin: 0 4px;
+    }
+
+    span {
+      @include font($color: var(--text-subdued));
+
+      width: auto;
+      white-space: nowrap;
+    }
+  }
+}
+
+.shade {
+  background-color: rgb(80, 56, 160);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, var(--background-base) 100%),
+    url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iLjA1IiBkPSJNMCAwaDMwMHYzMDBIMHoiLz48L3N2Zz4=);
+  height: 232px;
+  position: absolute;
+  width: 100%;
+}
+
+.btn {
+  @extend %flex-shared;
+
+  position: relative;
+  padding-top: 24px;
+
+  div:first-child {
+    @extend %flex-shared;
+
+    width: 100%;
+
+    button {
+      @include button($bgColor: var(--text-positive), $color: var(--text-base));
+      @extend %flex-shared;
+
+      justify-content: center;
+      border-radius: 56px;
+      height: 56px;
+      width: 56px;
+      min-width: 56px;
+
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
+  }
+}

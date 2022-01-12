@@ -1,0 +1,109 @@
+@import "@styles/mixins.scss";
+@import "@styles/extensions.scss";
+
+.btn {
+    @extend %flex-shared;
+
+    font-family: var(--font-base);
+    background-color: var(--background-press-opacity);
+    border: 0;
+    border-radius: 23px;
+    color: #fff;
+    cursor: pointer;
+    gap: 8px;
+    height: 32px;
+    margin-inline-start: 16px;
+    padding: 2px;
+    position: relative;
+
+    span {
+        @include font($weight: 700);
+
+        max-width: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &:focus {
+        background-color: var(--background-lighter);
+    }
+
+    div:last-child {
+        @extend %flex-shared;
+        margin-inline-end: 6px;
+    }
+}
+
+.container {
+    position: relative;
+    height: 28px;
+    width: 28px;
+
+    .icon {
+        @extend %flex-shared;
+
+        padding: 8px 0;
+        background-color: var(--text-bright-accent);
+        border-radius: 9999px;
+        justify-content: center;
+        width: 100%;
+        height: 1.75rem;
+    }
+}
+
+.dropdown {
+    z-index: 9999;
+    position: absolute;
+    inset: 0px 0px auto auto;
+    margin: 0px;
+    transform: translate3d(-32px, 56px, 0px);
+    pointer-events: auto;
+    white-space: nowrap;
+    min-width: 196px;
+
+    ul {
+        background-color: #282828;
+        border-radius: 4px;
+        box-shadow: 0 16px 24px rgb(0 0 0 / 30%), 0 6px 8px rgb(0 0 0 / 20%);
+        max-height: calc(100vh - 24px);
+        max-width: 350px;
+        min-width: 160px;
+        overflow-y: auto;
+        padding: 4px;
+        margin: 0;
+
+        li {
+            button {
+                @extend %flex-shared;
+
+                font-family: var(--font-base);
+                background: transparent;
+                border: 0;
+                border-radius: 2px;
+                color: rgba(255, 255, 255, 0.9);
+                cursor: default;
+                gap: 8px;
+                height: 40px;
+                justify-content: space-between;
+                padding: 12px;
+                padding-inline-end: 8px;
+                position: relative;
+                text-align: start;
+                width: 100%;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                }
+
+                span {
+                    @extend %truncate-shared;
+                    @include font();
+
+                    flex: 1;
+                }
+            }
+        }
+    }
+}

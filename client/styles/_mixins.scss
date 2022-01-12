@@ -1,0 +1,42 @@
+@mixin button($color: var(--text-subdued), $bgColor: transparent, $hover: var(--text-base), $w: 32px, $h: 32px) {
+  background-color: $bgColor;
+  border: none;
+  color: $color;
+  height: $h;
+  width: $w;
+  min-width: $w;
+  padding: 0;
+  cursor: default;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+@mixin font($color: inherit, $size: 14px, $lh: 16px, $weight: 400, $transform: none, $spacing: normal) {
+  color: $color;
+  line-height: $lh;
+  font-weight: $weight;
+  font-size: $size;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+}
+
+@mixin template($cols: 4) {
+  grid-gap: 16px;
+  padding: 0 16px;
+  align-items: center;
+
+  &[data-expand="true"] {
+    grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px, 1fr);
+  }
+
+  &[data-expand="false"] {
+    grid-template-columns: [index] 16px [first] 4fr [var1] 2fr [last] minmax(120px, 1fr);
+  }
+}

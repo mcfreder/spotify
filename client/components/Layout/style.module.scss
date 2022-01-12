@@ -1,0 +1,28 @@
+@import "@styles/extensions.scss";
+
+.wrapper {
+    @extend %grid-shared;
+    @extend %full-shared;
+
+    grid-template-areas:
+        "nav main feed"
+        "playback playback playback";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+}
+
+.playback {
+    grid-area: playback;
+    border-top: 1px solid var(--background-lighter);
+    z-index: 4;
+    background-color: var(--background-highlight);
+}
+
+.grid {
+    @extend %grid-shared;
+
+    padding: 0 1rem;
+    align-items: center;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    height: 90px;
+}

@@ -1,0 +1,183 @@
+@import "@styles/mixins.scss";
+@import "@styles/extensions.scss";
+
+.grid {
+  @extend %grid-shared;
+
+  border: 1px solid transparent;
+  grid-gap: 16px;
+  padding: 0 16px;
+  align-items: center;
+  height: 56px;
+  border-radius: 4px;
+
+  &[data-expanded="true"] {
+    grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px, 1fr);
+  }
+
+  &[data-expanded="false"] {
+    grid-template-columns: [index] 16px [first] 4fr [var1] 2fr [last] minmax(120px, 1fr);
+
+    div:last-child button {
+      opacity: 0;
+    }
+
+    &:hover {
+      div:last-child button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &[data-active="true"] {
+    background-color: var(--background-press-opacity-light);
+    color: var(--text-base);
+
+    .overflow[data-label="title"] {
+      color: var(--text-positive);
+    }
+
+    .index {
+      color: var(--text-positive);
+    }
+
+    .artist,
+    .album {
+      color: var(--text-base);
+    }
+  }
+
+  &[data-paused="false"] {
+    .image {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    background-color: var(--background-press-opacity-light);
+    cursor: default;
+
+    .btn {
+      opacity: 1;
+    }
+
+    .image {
+      opacity: 0;
+    }
+
+    .index {
+      opacity: 0;
+    }
+
+    .artist,
+    .album {
+      color: var(--text-base);
+    }
+  }
+}
+
+.grid-cell {
+  @extend %flex-shared;
+
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
+    justify-self: start;
+  }
+
+  &:first-child,
+  &:last-child {
+    justify-self: end;
+  }
+}
+
+.box {
+  position: relative;
+  height: 16px;
+  min-height: 16px;
+  width: 16px;
+  min-width: 16px;
+}
+
+.btn {
+  @include button($w: 100%, $h: 100%, $color: var(--text-base));
+
+  opacity: 0;
+}
+
+.index {
+  @extend %tabular-shared;
+
+  font-size: 16px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.right {
+  right: 0.25em;
+}
+
+.image {
+  opacity: 0;
+}
+
+.poster {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.grid-template {
+  @extend %grid-shared;
+
+  grid-template: "title title" "subtitle subtitle" / auto 1fr;
+  column-gap: 8px;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.overflow {
+  @extend %overflow-shared;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  &[data-label="title"] {
+    grid-area: title;
+  }
+
+  &[data-label="subtitle"] {
+    @include font($color: var(--text-subdued));
+    grid-area: subtitle;
+  }
+
+  .artist {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.album {
+  @include font($color: var(--text-subdued));
+  @extend %overflow-shared;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.duration {
+  @extend %tabular-shared;
+
+  margin-right: 32px;
+}
+
+.typography {
+  @include font($color: var(--text-subdued));
+  @extend %overflow-shared;
+}

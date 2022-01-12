@@ -1,0 +1,90 @@
+@import "@styles/mixins.scss";
+@import "@styles/extensions.scss";
+
+.wrapper {
+    @extend %flex-shared;
+
+    grid-column: span 3 / span 3;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.grid {
+    @extend %grid-shared;
+
+    grid-template: "title title" "subtitle subtitle" / auto 1fr;
+    column-gap: 8px;
+    margin: 0 8px 0 14px;
+}
+
+.container {
+    height: 56px;
+    width: 56px;
+    min-width: 56px;
+    background-color: var(--background-lighter);
+
+    img {
+        @extend %full-shared;
+
+        box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.box {
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        bottom: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(270deg, #181818, hsla(0, 0%, 9%, 0));
+        right: 0;
+        width: 12px;
+    }
+
+    &[role="title"] {
+        grid-area: title;
+    }
+
+    &[role="subtitle"] {
+        @extend %flex-shared;
+        grid-area: subtitle;
+
+        .typography {
+            padding-inline-end: 0;
+            font-size: 11px;
+            color: var(--text-subdued);
+        }
+    }
+}
+
+.typography {
+    @include font();
+
+    padding-inline-end: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+.btn {
+    @extend %flex-shared;
+    @include button();
+
+    justify-content: center;
+
+    &[aria-checked="true"] {
+        color: var(--text-positive);
+    }
+}

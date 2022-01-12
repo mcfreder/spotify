@@ -1,0 +1,9 @@
+@import "@styles/mixins.scss";
+@import "@styles/extensions.scss";
+
+.btn {
+  @extend %flex-shared;
+  @include button();
+
+  margin-right: 6px;
+}

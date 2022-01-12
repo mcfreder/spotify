@@ -1,0 +1,286 @@
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Light.afd9ab26.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Light.2a78c017.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Light.89e4be2e.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.3466e0ec.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.ea8d19db.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.a357677a.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.8d0a45cc.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.10e93738.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Bold.7eb7d0f7.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular;
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.c21e63c5.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.effa986f.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Black.ce8ef887.ttf) format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-arabic;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Light.dde45e52.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Light.5c7ed8d8.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Light.f0833f3b.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-arabic;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Book.aaab109b.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Book.3ad862e2.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Book.f0effcd1.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-arabic;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Bold.317e96e5.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Bold.9ddc7126.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Bold.f97cb921.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-arabic;
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Black.c32951f4.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Black.05b31ded.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIAraOnly-Black.6d6a4c25.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-hebrew;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Light.4884da16.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Light.2128eeac.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Light.2e1df62a.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-hebrew;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Book.cb36b6ec.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Book.ad2b13cd.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Book.fae4aece.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-hebrew;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Bold.ef043f44.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Bold.9f406804.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Bold.57b36278.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-hebrew;
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Black.217fb21f.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Black.0a11e734.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUIHbrOnly-Black.11abebe4.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-cyrillic;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Light.55fa9f4a.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Light.034997d0.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Light.b10eb959.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-cyrillic;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Book.6a858994.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Book.918c53b8.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Book.15af6ebe.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-cyrillic;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Bold.30dc9fb2.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Bold.909126fc.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Bold.67641b90.otf) format("opentype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: spotify-circular-cyrillic;
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Black.f5526fc4.woff2) format("woff2"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Black.7536a73f.woff) format("woff"),
+    url(https://open.scdn.co/cdn/fonts/CircularSpUICyrOnly-Black.50cd1ca9.otf) format("opentype");
+}
+
+:root {
+  --font-base: "spotify-circular", sans-serif;
+  --background-press: #000;
+  --background-press-opacity: rgba(0, 0, 0, 0.7);
+  --background-press-opacity-light: rgba(255, 255, 255, 0.1);
+  --background-base: #121212;
+  --background-highlight: #181818;
+  --background-lighter: #282828;
+  --text-base: #fff;
+  --text-subdued: #b3b3b3;
+  --text-bright-accent: #535353;
+  --text-negative: #f15e6c;
+  --text-warning: #ffa42b;
+  --text-positive: #1db954;
+  --text-announcement: #3d91f4;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-base);
+  color: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-base);
+  border: 0;
+  height: 100%;
+  user-select: none;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+#__next {
+  height: 100%;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}

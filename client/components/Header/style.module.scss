@@ -1,0 +1,55 @@
+@import "@styles/mixins.scss";
+@import "@styles/extensions.scss";
+
+.wrapper {
+    box-sizing: content-box;
+    top: 64px;
+    height: 36px;
+    position: sticky;
+    border-bottom: 1px solid transparent;
+    margin: 0 -32px 16px;
+    padding: 0 32px;
+}
+
+.grid {
+    @extend %grid-shared;
+
+    &[data-expanded="true"] {
+        grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px, 1fr);
+    }
+
+    &[data-expanded="false"] {
+        grid-template-columns: [index] 16px [first] 4fr [var1] 2fr [last] minmax(120px, 1fr);
+    }
+
+    grid-gap: 16px;
+    padding: 0 16px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    color: var(--text-subdued);
+
+    .box:first-child {
+        @extend %flex-shared;
+
+        justify-self: end;
+        margin-bottom: 1px;
+    }
+
+    .box:nth-child(2),
+    .box:nth-child(3),
+    .box:nth-child(4) {
+        justify-self: start;
+    }
+
+    .box:last-child {
+        @extend %flex-shared;
+
+        justify-self: end;
+        margin-right: 32px;
+    }
+}
+
+.typography {
+    @include font($size: 12px, $spacing: 0.1em, $transform: uppercase);
+}

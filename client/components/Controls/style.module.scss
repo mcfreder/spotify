@@ -1,0 +1,55 @@
+@import "@styles/extensions.scss";
+@import "@styles/mixins.scss";
+
+.wrapper {
+    @extend %flex-shared;
+
+    grid-column: span 4 / span 4;
+    flex-direction: column;
+}
+
+.container {
+    @extend %flex-shared;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 12px;
+    justify-content: center;
+
+    .box:first-child {
+        justify-content: flex-end;
+    }
+}
+
+.box {
+    @extend %flex-shared;
+
+    grid-gap: 8px;
+}
+
+.btn {
+    @include button();
+    @extend %flex-shared;
+
+    justify-content: center;
+}
+
+.playBtn {
+    @include button(var(--background-press), var(--text-base), var(--background-press));
+    @extend %flex-shared;
+
+    justify-content: center;
+    border-radius: 32px;
+
+    &:disabled {
+        background-color: var(--text-bright-accent);
+        cursor: default;
+        opacity: 1;
+    }
+
+    &:hover {
+        transform: scale(1.06);
+    }
+}

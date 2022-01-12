@@ -1,0 +1,28 @@
+@import "@styles/extensions";
+@import "@styles/mixins";
+
+.box {
+  width: 100%;
+
+  &[role="main"] {
+    grid-area: main;
+  }
+
+  &[role="header"] {
+    @extend %flex-shared;
+
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    height: 4rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+}
+
+.container {
+  position: relative;
+  padding: 1rem 2rem 0;
+  border: 1px solid transparent;
+  width: 100%;
+}
